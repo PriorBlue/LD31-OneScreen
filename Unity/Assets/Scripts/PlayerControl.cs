@@ -11,16 +11,16 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (Input.GetKey (KeyCode.W)) {
-			rigidbody.AddForce(transform.forward * 20f);
+			rigidbody.AddForce(transform.forward * 50f);
 		}
 		else if (Input.GetKey (KeyCode.S)) {
-			rigidbody.AddForce(transform.forward * -20f);
+			rigidbody.AddForce(transform.forward * -50f);
 		}
 		if (Input.GetKey (KeyCode.A)) {
-			rigidbody.AddForce(transform.right * -20f);
+			rigidbody.AddForce(transform.right * -50f);
 		}
 		else if (Input.GetKey (KeyCode.D)) {
-			rigidbody.AddForce(transform.right * 20f);
+			rigidbody.AddForce(transform.right * 50f);
 		}
 	}
 }
