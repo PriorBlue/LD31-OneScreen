@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 8e59d1aabb29a89429d9a92f70eb88d9
-=======
-guid: c8a7a680cc232f4489778015edeed9c6
->>>>>>> 76f3b586f93c701a84156a3d67b6faac47f0e2e0
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -15,8 +11,10 @@ ModelImporter:
     400004: Room_Quarter
     2300000: Room_Full
     2300002: Room_Quarter
+    2300004: //RootNode
     3300000: Room_Full
     3300002: Room_Quarter
+    3300004: //RootNode
     4300000: Room_Full
     4300002: Room_Quarter
     7400000: Take 001
@@ -57,13 +55,8 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-<<<<<<< HEAD
-    tangentImportMode: 0
-  importAnimation: 0
-=======
     tangentImportMode: 1
   importAnimation: 1
->>>>>>> 76f3b586f93c701a84156a3d67b6faac47f0e2e0
   copyAvatar: 0
   humanDescription:
     human: []
