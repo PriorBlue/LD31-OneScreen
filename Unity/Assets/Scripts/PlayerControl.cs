@@ -3,10 +3,7 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+	public Transform oldPointer;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
