@@ -10,9 +10,9 @@ public class PointGravity : MonoBehaviour {
 			Vector3 direction = transform.position - other.transform.position;
 			float dist = Vector3.Distance(other.transform.position, transform.position);
 
-			if(dist >= 6.0f) {
+			//if(dist >= 6.0f) {
 				other.rigidbody.AddForce(direction * 10.0f);
-			}
+			//}
 
 			other.transform.rotation = 
 				Camera.main.GetComponent<rotateCamera>().futureCam.transform.rotation;
