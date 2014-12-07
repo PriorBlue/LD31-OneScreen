@@ -39,7 +39,7 @@ ModelImporter:
     4300006: door_R
     4300008: Mesh
     4300010: box
-    7400000: Take 001
+    7400000: Doors
     9500000: //RootNode
     11100000: //RootNode
   materials:
@@ -59,7 +59,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Doors
       takeName: Take 001
       firstFrame: 0
       lastFrame: 24
