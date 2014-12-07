@@ -2,12 +2,13 @@
 using System.Collections;
 
 public class StartGame : MonoBehaviour {
-
-	// Use this for initialization
+	public GameObject tempPlayer;
 	void Start () {
+		tempPlayer = GameObject.Find ("Player");
+		tempPlayer.SetActive (false);
 	}
 
 	public void startGame() {
-		//code for starting the game goes here
+		tempPlayer.SetActive (true);
 	}
 }
