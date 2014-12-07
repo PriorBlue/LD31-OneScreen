@@ -3,10 +3,10 @@ using System.Collections;
 
 public class PointGravity : MonoBehaviour {
 	void OnTriggerStay (Collider other) {
-		other.rigidbody.useGravity = false;
-		
 		if (other.rigidbody && other.gameObject.tag == "Gravity")
 		{
+			other.rigidbody.useGravity = false;
+
 			Vector3 direction = transform.position - other.transform.position;
 			float dist = Vector3.Distance(other.transform.position, transform.position);
 
