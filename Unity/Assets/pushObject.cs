@@ -3,8 +3,8 @@ using System.Collections;
 
 public class pushObject : MonoBehaviour {
 	void OnTriggerStay (Collider other) {
-		if (other.rigidbody && other.gameObject.tag == "Gravity" && other.gameObject.tag != "Player") {
-			other.rigidbody.AddForce(transform.forward * 3000.0f);
+		if (other.rigidbody && other.gameObject.tag == "Gravity" && other.gameObject.name != "Player") {
+			other.rigidbody.AddForce(transform.forward * 10000.0f);
 		}
 	}
 }

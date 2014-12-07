@@ -20,7 +20,7 @@ public class EnterRoom : MonoBehaviour {
 					} else if (oPos.y < Screen.height * 0.5f) {
 						Camera.main.GetComponent<rotateCamera> ().futureCam.transform.Rotate (-90f, 0f, 0f);
 					}
-				}else{
+				} else {
 					if (oPos.x < Screen.width * 0.5f) {
 						Camera.main.GetComponent<rotateCamera> ().futureCam.transform.Rotate (0f, 90f, 0f);
 					} else if (oPos.x > Screen.width * 0.5f) {
