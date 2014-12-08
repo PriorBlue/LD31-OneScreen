@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class StartGame : MonoBehaviour {
-	public GameObject tempPlayer;
+	private GameObject tempPlayer;
+
 	void Start () {
 		tempPlayer = GameObject.Find ("Player");
 		tempPlayer.SetActive (false);

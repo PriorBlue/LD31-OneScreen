@@ -8,15 +8,14 @@ public class PointGravity : MonoBehaviour {
 			other.rigidbody.useGravity = false;
 
 			Vector3 direction = transform.position - other.transform.position;
-			float dist = Vector3.Distance(other.transform.position, transform.position);
 
-			//if(dist >= 6.0f) {
-				other.rigidbody.AddForce(direction * 10.0f);
-			//}
+			other.rigidbody.AddForce(direction * other.rigidbody.mass * 10.0f);
 
-			other.transform.rotation = 
-				Camera.main.GetComponent<rotateCamera>().futureCam.transform.rotation;
-			other.transform.Rotate(270f,0f,0f);
+			if(other.gameObject.name == "Player") {
+				other.transform.rotation = 
+					Camera.main.GetComponent<rotateCamera>().futureCam.transform.rotation;
+				other.transform.Rotate(270f,0f,0f);
+			}
 			other.transform.rotation =
 				Quaternion.FromToRotation(-other.transform.up, direction) * other.transform.rotation;
 		}
