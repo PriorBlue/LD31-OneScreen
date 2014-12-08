@@ -23,6 +23,7 @@ public class openDoor : MonoBehaviour {
 					}
 					opened = true;
 					renderer.material.color = new Color(0f,1f,0f);
+					coll.gameObject.renderer.material.color = new Color(0f,1f,0f);
 				}
 			} else {
 				if (coll.gameObject.name == "Pusher") {
