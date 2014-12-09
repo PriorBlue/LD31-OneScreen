@@ -1,23 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour
+{
 
-	public Transform oldPointer;
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-		if (Input.GetKey (KeyCode.W)) {
-			rigidbody.AddForce(transform.forward * 55f);
-		}
-		else if (Input.GetKey (KeyCode.S)) {
-			rigidbody.AddForce(transform.forward * -55f);
-		}
-		if (Input.GetKey (KeyCode.A)) {
-			rigidbody.AddForce(transform.right * -55f);
-		}
-		else if (Input.GetKey (KeyCode.D)) {
-			rigidbody.AddForce(transform.right * 55f);
-		}
-	}
+    public Transform oldPointer;
+    public float robotSpeed = 60f;
+    public Vector3 movementDirection;
+    
+    void FixedUpdate()
+    {
+        movementDirection.Set(0, 0, 0);
+        if (Input.GetKey(KeyCode.W))
+        {
+            movementDirection = movementDirection + transform.forward;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            movementDirection = movementDirection - transform.forward;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            movementDirection = movementDirection - transform.right;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            movementDirection = movementDirection + transform.right;
+        }
+        rigidbody.AddForce(Vector3.Normalize(movementDirection) * robotSpeed);
+    }
 }
